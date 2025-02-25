@@ -1,0 +1,66 @@
+/* Container for the search section */
+.search-section {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+/* Search form with neumorphic design */
+.search {
+  width: 90%;
+  max-width: 800px;
+  margin: 4rem auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1.75rem;
+  border-radius: 3rem;
+  background: #1f2123;
+  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+}
+
+/* Search input styling */
+.search input {
+  flex: 1;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  outline: none;
+  color: #a1a1a1;
+  background: #1f2123;
+}
+
+/* Search button styling */
+.search button {
+  padding: 0.5rem 2rem;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  border: none;
+  background: linear-gradient(90deg, #ff8c00, #ff4757);
+  transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+.search button:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+  .search {
+    width: 100%;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .search input {
+    font-size: 1rem;
+  }
+  
+  .search button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}

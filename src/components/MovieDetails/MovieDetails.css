@@ -1,0 +1,155 @@
+/* Overlay background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal container */
+.movie-details {
+  background: #1f2123;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #ff8c00;
+}
+
+/* Movie title */
+.movie-details h2 {
+  color: #ff8c00;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Content layout */
+.details-content {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Poster image */
+.details-content img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Movie information */
+.info {
+  flex: 1;
+  color: #fff;
+}
+
+.info p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.info strong {
+  color: #ff8c00;
+  margin-right: 0.5rem;
+}
+
+/* Streaming section */
+.streaming-links {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.streaming-links h3 {
+  color: #ff8c00;
+  margin-bottom: 1rem;
+}
+
+/* Watch buttons container */
+.watch-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Watch button styling */
+.watch-button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.watch-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button variants */
+.justwatch {
+  background: #ffd700;
+  color: #000;
+}
+
+.imdb {
+  background: #f5c518;
+  color: #000;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .movie-details {
+    padding: 1rem;
+    width: 90%;
+  }
+
+  .details-content {
+    flex-direction: column;
+  }
+  
+  .details-content img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .watch-buttons {
+    flex-direction: column;
+  }
+  
+  .watch-button {
+    width: 100%;
+  }
+  
+  .movie-details h2 {
+    font-size: 1.5rem;
+  }
+}

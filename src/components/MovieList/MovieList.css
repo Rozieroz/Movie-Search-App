@@ -1,0 +1,54 @@
+/* Featured section container */
+.featured-section {
+  margin: 3rem 0;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Section title */
+.featured-section h2 {
+  color: #ff8c00;
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+  font-size: 2rem;
+}
+
+/* Grid layout for movie cards */
+.movie-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  justify-items: center;
+}
+
+/* Responsive grid layout */
+@media screen and (max-width: 1200px) {
+  .movie-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .movie-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .featured-section h2 {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .movie-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .featured-section h2 {
+    font-size: 1.2rem;
+  }
+}

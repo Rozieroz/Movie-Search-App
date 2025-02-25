@@ -1,0 +1,79 @@
+/* Movie card container */
+.movie {
+  width: 280px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Year overlay */
+.movie div:nth-of-type(1) {
+  position: absolute;
+  padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  color: #ff8c00;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Show year on hover */
+.movie:hover div:nth-of-type(1) {
+  opacity: 1;
+}
+
+/* Poster container */
+.movie div:nth-of-type(2) {
+  width: 100%;
+  height: 100%;
+}
+
+/* Poster image */
+.movie div:nth-of-type(2) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Movie info section */
+.movie div:nth-of-type(3) {
+  z-index: 2;
+  background-color: #343739;
+  padding: 16px 24px 24px 24px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+/* Movie type text */
+.movie div:nth-of-type(3) span {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #ff8c00;
+}
+
+/* Movie title */
+.movie div:nth-of-type(3) h3 {
+  margin-top: 5px;
+  color: #fff;
+}
+
+/* Card hover effect */
+.movie:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+  .movie {
+    height: 350px;
+  }
+}
