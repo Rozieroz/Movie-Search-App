@@ -3,8 +3,8 @@ import axios from 'axios';
 import { SearchBar, MovieList, MovieDetails } from './components';
 import './App.css';
 
-// API endpoint with key
-const API_URL = "https://www.omdbapi.com?apikey=53414e19";
+// API endpoint with environment variable
+const API_URL = `https://www.omdbapi.com?apikey=${import.meta.env.VITE_OMDB_API_KEY}`;
 
 function App() {
   // State management for different data
